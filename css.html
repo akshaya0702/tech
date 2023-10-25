@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Dotech</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+       html,
+body {
+  min-width: 290px;
+  color: #4d4e53;
+  background-color: #ffffff;
+  font-family: 'Open Sans', Arial, sans-serif;
+  line-height: 1.5;
+}
+
+#navbar {
+  position: fixed;
+  min-width: 290px;
+  top: 0px;
+  
+  left: 0px;
+  width: 300px;
+  height: 100%;
+  border-right: solid;
+  border-color: rgba(0, 22, 22, 0.4);
+}
+        
+
+header {
+  color: black;
+  margin: 10px;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: thin;
+}
+
+#main-doc header {
+  text-align: left;
+  margin: 0px;
+}
+
+#navbar ul {
+  height: 88%;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+     transition: all 0.3s ease 0s;
+}
+
+#navbar li {
+  color: #4d4e53;
+  border-top: 1px solid;
+  list-style: none;
+  position: relative;
+  width: 100%;
+     transition: all 0.3s ease 0s;
+}
+
+#navbar a {
+  display: block;
+  padding: 10px 30px;
+  color: #4d4e53;
+  text-decoration: none;
+  cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+ #navbar ul a li:hover{
+        color: blue;
+        }
+
+#main-doc {
+  position: absolute;
+  margin-left: 310px;
+  padding: 20px;
+  margin-bottom: 110px;
+}
+
+section article {
+  color: #4d4e53;
+  margin: 15px;
+  font-size: 0.96em;
+}
+
+section li {
+  margin: 15px 0px 0px 20px;
+}
+
+code {
+  display: block;
+  text-align: left;
+  white-space: pre-line;
+  position: relative;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 2;
+  background-color: #f7f7f7;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 815px) {
+  /* For mobile phones: */
+  #navbar ul {
+    border: 1px solid;
+    height: 207px;
+  }
+
+  #navbar {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 275px;
+    border: none;
+    z-index: 1;
+    border-bottom: 2px solid;
+  }
+
+  #main-doc {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 270px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #main-doc {
+    margin-left: -10px;
+  }
+
+  code {
+    margin-left: -20px;
+    width: 100%;
+    padding: 15px;
+    padding-left: 10px;
+    padding-right: 45px;
+    min-width: 233px;
+  }
+}
+      
+        .img-fluiid
+        {
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+          <img class="img-fluiid" src="wht.jpg" alt="">  <h2 class="m-0 text-primary">Do<span>Tech</span></h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                
+                <div class="nav-item dropdown">
+                    <a href="courses.html" class="nav-item nav-link">Courses</a>
+                    <div class="dropdown-menu fade-down m-0">
+                         <a href="content.html" class="dropdown-item">Java Script</a>
+                        <a href="css.html" class="dropdown-item">CSS</a>
+                        <a href="javascr.html" class="dropdown-item">java</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="team.html" class="dropdown-item">Our Team</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="404.html" class="dropdown-item">404 Page</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5">
+        <div class="owl-carousel header-carousel position-relative">
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="img/carousel-1.jpg" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-sm-10 col-lg-8">
+                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Best Online Courses</h5>
+                                <h1 class="display-3 text-white animated slideInDown">The Best Online Learning Platform</h1>
+                                <p class="fs-5 text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea sanctus eirmod elitr.</p>
+                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="dp.jpg" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-sm-10 col-lg-8">
+                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Best Online Courses</h5>
+                                <h1 class="display-3 text-white animated slideInDown">Get Educated Online From Your Home</h1>
+                                <p class="fs-5 text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea sanctus eirmod elitr.</p>
+                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <div class="">
+<nav id="navbar">
+  <header>JS Documentation</header>
+  <ul>
+    <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+    <li>
+      <a class="nav-link" href="#What_you_should_already_know">What you should already know</a>
+    </li>
+    <li>
+      <a class="nav-link" href="#JavaScript_and_Java">css</a>
+    </li>
+    <li><a class="nav-link" href="#Hello_world">syntax</a></li>
+    <li><a class="nav-link" href="#Variables">margins</a></li>
+    <li>
+      <a class="nav-link" href="#Declaring_variables">icons</a>
+    </li>
+    <li><a class="nav-link" href="#Variable_scope">padding</a></li>
+    <li><a class="nav-link" href="#Global_variables">outline</a></li>
+    <li><a class="nav-link" href="#Constants">display</a></li>
+    <li><a class="nav-link" href="#Data_types">color</a></li>
+    <li>
+      <a class="nav-link" href="#if...else_statement">height and width</a>
+    </li>
+    
+  </ul>
+</nav>
+<main id="main-doc">
+  <section class="main-section" id="Introduction">
+    <header>Introduction</header>
+    <article>
+      <p>
+        CSS is the language we use to style a Web page.
+
+What is CSS?
+CSS stands for Cascading Style Sheets
+CSS describes how HTML elements are to be displayed on screen, paper, or in other media
+CSS saves a lot of work. It can control the layout of multiple web pages all at once
+External stylesheets are stored in CSS files
+
+      </p>
+
+      <p>
+        Why Use CSS?
+CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.
+      </p>
+      <ul>
+        <li>
+          CSS Solved a Big Problem
+HTML was NEVER intended to contain tags for formatting a web page!
+
+HTML was created to describe the content of a web page, like:
+
+<h1>This is a heading</h1>
+
+<p>This is a paragraph.</p>
+
+When tags like and color attributes were added to the HTML 3.2 specification, it started a nightmare for web developers. Development of large websites, where fonts and color information were added to every single page, became a long and expensive process.
+
+To solve this problem, the World Wide Web Consortium (W3C) created CSS.
+
+CSS removed the style formatting from the HTML page!
+        </li>
+        <li>
+          CSS Saves a Lot of Work!
+The style definitions are normally saved in external .css files.
+
+With an external stylesheet file, you can change the look of an entire website by changing just one file!
+
+
+        </li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="What_you_should_already_know">
+    <header>What you should already know</header>
+    <article>
+      <p>This guide assumes you have the following basic background:</p>
+
+      <ul>
+        <li>
+          A general understanding of the Internet and the World Wide Web (WWW).
+        </li>
+        <li>Good working knowledge of HyperText Markup Language (HTML).</li>
+        <li>
+          Some programming experience. If you are new to programming, try one of
+          the tutorials linked on the main page about JavaScript.
+        </li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="JavaScript_and_Java">
+    <header>CSS</header>
+    <article>
+      <p>
+        css are similar in some ways but fundamentally different
+        in some others. The JavaScript language resembles Java but does not have
+        css static typing and strong type checking. JavaScript follows most
+        css expression syntax, naming conventions and basic control-flow
+        constructs which was the reason why it was renamed from LiveScript to
+        JavaScript.
+      </p>
+
+      <p>
+        In contrast to Css compile-time system of classes built by
+        declarations, JavaScript supports a runtime system based on a small
+        number of data types representing numeric, Boolean, and string values.
+        JavaScript has a prototype-based object model instead of the more common
+        class-based object model. The prototype-based model provides dynamic
+        inheritance; that is, what is inherited can vary for individual objects.
+        JavaScript also supports functions without any special declarative
+        requirements. Functions can be properties of objects, executing as
+        loosely typed methods.
+      </p>
+      <p>
+        CSS is a very free-form language compared to css. You do not
+        have to declare all variables, classes, and methods. You do not have to
+        be concerned with whether methods are public, private, or protected, and
+        you do not have to implement interfaces. Variables, parameters, and
+        function return types are not explicitly typed.
+      </p>
+    </article>
+  </section>
+  <section class="main-section" id="Hello_world">
+    <header>syntax</header>
+    <article>
+      A CSS rule consists of a selector and a declaration block.
+
+CSS Syntax
+CSS selector
+
+The selector points to the HTML element you want to style.
+
+The declaration block contains one or more declarations separated by semicolons.
+
+Each declaration includes a CSS property name and a value, separated by a colon.
+
+Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.
+
+
+      <code>p {
+  color: red;
+  text-align: center;
+} 
+      </code>
+
+      Select the code in the pad and hit Ctrl+R to watch it unfold in your
+      browser!
+    </article>
+  </section>
+  <section class="main-section" id="Variables">
+    <header>Margins</header>
+    <p>
+      Margins are used to create space around elements, outside of any defined borders.
+    </p>
+    <p>
+      CSS Margins
+The CSS margin properties are used to create space around elements, outside of any defined borders.
+
+With CSS, you have full control over the margins. There are properties for setting the margin for each side of an element (top, right, bottom, and left).
+        div {
+  margin: 70px;
+  border: 1px solid #4CAF50;
+}
+    </p>
+    <p>
+     Margin - Individual Sides
+CSS has properties for specifying the margin for each side of an element:
+
+margin-top
+margin-right
+margin-bottom
+margin-left
+All the margin properties can have the following values:
+
+auto - the browser calculates the margin
+length - specifies a margin in px, pt, cm, etc.
+% - specifies a margin in % of the width of the containing element
+inherit - specifies that the margin should be inherited from the parent element
+
+    </p>
+  </section>
+  <section class="main-section" id="Declaring_variables">
+    <header>icons</header>
+    <article>
+    
+      <p>
+Icons can easily be added to your HTML page, by using an icon library.
+
+ <code><head>
+<title>Font Awesome Icons</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!--Get your own code at fontawesome.com-->
+</head>
+<body>
+
+<h1>Font Awesome icon library</h1>
+
+<p>Some Font Awesome icons:</p>
+<i class="fas fa-cloud"></i>
+<i class="fas fa-heart"></i>
+<i class="fas fa-car"></i>
+<i class="fas fa-file"></i>
+<i class="fas fa-bars"></i>
+
+<p>Styled Font Awesome icons (size and color):</p>
+<i class="fas fa-cloud" style="font-size:24px;"></i>
+<i class="fas fa-cloud" style="font-size:36px;"></i>
+<i class="fas fa-cloud" style="font-size:48px;color:red;"></i>
+<i class="fas fa-cloud" style="font-size:60px;color:lightblue;"></i>
+
+</body></code> 
+       
+      </p>
+      <p>
+o use the Font Awesome icons, go to fontawesome.com, sign in, and get a code to add in the section of your HTML page:
+
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
+Read more about how to get started with Font Awesome in our Font Awesome 5 tutorial.
+
+Note: No downloading or installation is required!
+        </p>
+    </article>
+  </section>
+  <section class="main-section" id="Variable_scope">
+    <header>padding</header>
+    <article>
+      <p>
+Padding is used to create space around an element's content, inside of any defined borders.
+      </p>
+
+      <p>
+        JavaScript before ECMAScript 2015 does not have block statement scope;
+        rather, a variable declared within a block is local to the function (or
+        global scope) that the block resides within. For example the following
+        code will log 5, because the scope of x is the function (or global
+        context) within which x is declared, not the block, which in this case
+        is an if statement.
+      </p>
+      <code>div {
+  padding: 70px;
+  border: 1px solid #4CAF50;
+}
+
+<body>
+
+<h2>CSS Padding</h2>
+<div>This element has a padding of 70px.</div>
+
+</body></code>
+      <p>
+        CSS Padding
+The CSS padding properties are used to generate space around an element's content, inside of any defined borders.
+
+With CSS, you have full control over the padding. There are properties for setting the padding for each side of an element (top, right, bottom, and left).
+      </p>
+
+      
+    </article>
+  </section>
+  <section class="main-section" id="Global_variables">
+    <header>outline</header>
+    <article>
+      <p>
+        An outline is a line drawn outside the element's border.
+      </p>
+
+       <code>     <p>
+        p {
+  border: 2px solid black;
+  outline: #4CAF50 solid 10px;
+  margin: auto;  
+  padding: 20px;
+  text-align: center;
+}
+
+<body>
+
+<h2>CSS Outline</h2>
+<p>This element has a 2px black border and a green outline with a width of 10px.</p>
+
+</body>
+      </p></code>
+    </article>
+  </section>
+  <section class="main-section" id="Constants">
+    <header>Display</header>
+    <article>
+      <p>
+        The display property is the most important CSS property for controlling layout.
+
+The display Property
+The display property specifies if/how an element is displayed.
+
+Every HTML element has a default display value depending on what type of element it is. The default display value for most elements is block or inline.
+      </p>
+
+
+      <p>
+       Block-level Elements
+A block-level element always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can).
+
+<code>The <div> element is a block-level element.
+Examples of block-level elements:
+
+</div>
+</code>
+
+Inline Elements
+An inline element does not start on a new line and only takes up as much width as necessary.
+
+This is an inline span element inside a paragraph.
+
+Examples of inline element
+Display: none;
+display: none; is commonly used with JavaScript to hide and show elements without deleting and recreating them. Take a look at our last example on this page if you want to know how this can be achieved.
+
+The element uses display: none; as default. 
+
+
+
+      <code>const MY_OBJECT = {"key": "value"}; MY_OBJECT.key = "otherValue";</code>
+    </article>
+  </section>
+  <section class="main-section" id="Data_types">
+    <header>color</header>
+    <article>
+      <p>Colors are specified using predefined color names, or RGB, HEX, HSL, RGBA, HSLA values.
+</p>
+ <code>   
+
+  <h1 style="background-color:Tomato;">Tomato</h1>
+<h1 style="background-color:Orange;">Orange</h1>
+<h1 style="background-color:DodgerBlue;">DodgerBlue</h1>
+<h1 style="background-color:MediumSeaGreen;">MediumSeaGreen</h1>
+<h1 style="background-color:Gray;">Gray</h1>
+<h1 style="background-color:SlateBlue;">SlateBlue</h1>
+<h1 style="background-color:Violet;">Violet</h1>
+<h1 style="background-color:LightGray;">LightGray</h1>      </code>
+    </article>
+  </section>
+  <section class="main-section" id="if...else_statement">
+    <header>height and width</header>
+    <article>
+      The CSS height and width properties are used to set the height and width of an element.
+
+The CSS max-width property is used to set the maximum width of an element.
+
+      <code>
+div {
+  height: 50px;
+  width: 100%;
+  border: 1px solid #4CAF50;
+}
+
+<body>
+
+<h2>CSS height and width properties</h2>
+
+<div>This div element has a height of 50 pixels and a width of 100%.</div>
+
+</body>
+      </code>
+      <p>
+        CSS Setting height and width
+The height and width properties are used to set the height and width of an element.
+
+The height and width properties do not include padding, borders, or margins. It sets the height/width of the area inside the padding, border, and margin of the element.
+          CSS height and width Values
+The height and width properties may have the following values:
+
+auto - This is default. The browser calculates the height and width
+length - Defines the height/width in px, cm, etc.
+% - Defines the height/width in percent of the containing block
+initial - Sets the height/width to its default value
+inherit - The height/width will be inherited from its parent value
+      </p>
+      <code>
+div {
+  height: 200px;
+  width: 50%;
+  background-color: powderblue;
+}
+
+<body>
+
+<h2>Set the height and width of an element</h2>
+
+<div>This div element has a height of 200px and a width of 50%.</div>
+
+</body>
+
+      </code>
+      
+    </article>
+  </section>
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Privacy Policy</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">FAQs & Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                 <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Gallery</h4>
+                    <div class="row g-2 pt-2">
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
+                        </div>
+
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Newsletter</h4>
+                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="">Home</a>
+                            <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FQAs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
